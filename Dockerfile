@@ -20,6 +20,6 @@ VOLUME /var/lib/eventstore
 COPY eventstore.conf /etc/eventstore/
 COPY entrypoint.sh /
 
-HEALTHCHECK --timeout=2s CMD curl -sf http://localhost:2113/stats || exit 1
+# HEALTHCHECK --timeout=2s CMD curl -sf http://localhost:2113/stats || exit 1
 
 ENTRYPOINT ["/entrypoint.sh"]
